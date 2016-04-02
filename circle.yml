@@ -8,3 +8,8 @@ machine:
       branch: master
       heroku:
         appname: rails-testee
+        commands:
+          - heroku maintenance:on
+          - heroku scale worker=0
+          - git push -f git@heroku.com:rails-testee.git $CIRCLE_SHA1:refs/heads/master
+          - heroku maintenance:off

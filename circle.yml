@@ -1,7 +1,8 @@
 machine:
   timezone:
     Asia/Tokyo
-  ruby: 2.3.0
+  ruby:
+    version: 2.3.0
 
 deployment:
   production:
